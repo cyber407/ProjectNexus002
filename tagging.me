@@ -2,6 +2,8 @@
     kondisi siap rilis.
     setelah melakukan tag , lihat tag dengan printah git tag
     dan untuk menghapus tag yang ada, gunakan git tag -d "nama tag nya"
+    setelah melamkukan tag , push kode dan prosesnya ke online repo menggunakan printah push 
+    (git push origin master --tags).
     -- cara memberikan kode numerik versi bisanya dengan 3 digit angka atau 2 digit angka tergantung skema
         project seperti apa (inilah yang di sebut Semantic Versioning).
         --- skema 3 digit (MAJOR.MINOR.PATCH)
@@ -22,3 +24,14 @@
 -- skenario > seluruh fitur yang ada di barnch Release sudah siap dan sudah di testing, sekarang untuk 
               menandai versi dari repo online (mana versi 1.0 dll) adalah dengan cara melakukan tagging pada 
               pada repo onlinenya, seingga user bisa memilih ingin versi berapapun
+
+
+--- WARNING! > Error terminal yang mengalami crash
+                crash ini adalah masalah apps Editor sendiri, bukan pada git
+        fix 1 > menulis pesan tag langsung : "git tag -a vM.M.P -m "pesan""
+        fix 2 > menggunakan vim sebagai standar default git untuk message tag 
+                "git config --global core.editor "vim"" (gunakan :qw untuk exit pada vim)
+        fix 3 > menggunakan notepad sebagai standar default git untuk message tag 
+                "git config --global core.editor "notepad""
+
+    exchange : jika ingin mengembalikan stelan global maka pakai printah "git config --global --unset core.editor"
