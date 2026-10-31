@@ -1,0 +1,24 @@
+--- git tag -a "nama tag" > printah untuk menandai milestone (versi relase) proses pengembangan sudah mencapai
+    kondisi siap rilis.
+    setelah melakukan tag , lihat tag dengan printah git tag
+    dan untuk menghapus tag yang ada, gunakan git tag -d "nama tag nya"
+    -- cara memberikan kode numerik versi bisanya dengan 3 digit angka atau 2 digit angka tergantung skema
+        project seperti apa (inilah yang di sebut Semantic Versioning).
+        --- skema 3 digit (MAJOR.MINOR.PATCH)
+            - MAJOR adalah angka paling kiri (V1.0.0) yang ada di dalam Semantic Versioning, hal ini di 
+                tingkatkan biasanya ada perubahan kode total , fitur lama yang di hapus dan ada penambahan
+                fitur baru sampai skema penggunaan aplikasi nya usdah berbeda total (contoh : v1.7.5 > v2.0.0).
+            - MINOR adalah angka yang ada di tengah dalam Semantic Versioning , ketika angka ini berubah
+                biasanya ini adalah penambahan beberapa hal seperti halaman baru , fungsi baru atau fungsi
+                pendukung lainnya tanpa merusak apa yang sudah ada. (Aturan Penting: Setiap kali angka MINOR 
+                naik, angka di sebelah kanannya (PATCH) wajib direset kembali menjadi 0).
+            - PATCH adalah angka paling kanan dalam Semantic Versioning, biasanya ini tidak ada penambahan fitur
+                sama sekali, biasanya hanya berisi perbaikan kalau sekiranya ada typo ringan, menambal celah
+                keamanan atau memperbaiki eror kecil agar aplikasi berjalan lebih lancar.
+                (Aturan Penting: Setiap kali angka PATCH naik, angka MAJOR dan MINOR di sebelah kirinya 
+                tidak boleh berubah.)
+
+
+-- skenario > seluruh fitur yang ada di barnch Release sudah siap dan sudah di testing, sekarang untuk 
+              menandai versi dari repo online (mana versi 1.0 dll) adalah dengan cara melakukan tagging pada 
+              pada repo onlinenya, seingga user bisa memilih ingin versi berapapun
