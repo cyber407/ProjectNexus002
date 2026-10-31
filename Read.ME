@@ -1,0 +1,33 @@
+--- konflik pada git bisa berbagai macam hal
+    -- timeline konflik (masalah yang muncul saat mencoba melakukan push ke repo online dan git menolak
+        karna timeline di repo online lebih maju dari repo local), biasanya cara mengatasi hal ini adalah dengan
+        cara melakukan perbaikan biasanaya pull dulu dari repo online ke repo local.
+        -- ada juga dalam beberapa kasus terjadi percabangan timeline
+            skenario ini terjadi karna adanya konflik percabangan waktu, misalnya online repo sudah mencapai commit 2 
+            dan di local repo juga sama timeline nya (sudah ada commit 1 dan 2 persis seperti di online repo) tapi tiba tiba'
+            membuat local repo baru dengan git init dan kemudiam membuat file (anggap saja 5 files) dan di commit, ketika
+            melakukan push ke local repo ini akan menyebabkan error karna timeline nya tentu saja repo local lebih maju,
+            kemudian ingin melakukan pull ini akan di tolak juga karna sejarah commit nya sudah berbeda (karna masalahnya
+            adalah repo local ini sudah melakukan commit A > ini adalah sejarah asing), jika posisi nya sudah seperti ini
+            maka ini sudah menjadi 2 dunia berbeda (Multiverse Timeline), online repo pula garis waktu commit 1 , commit 2
+            sementara local repo garis waktunya adalah commit A , ini tidak akan bisa di satukan
+    
+    --- konflik masalah perbubahan yang bertabrakan (konflik ini terjadi jika ada seseorang dari salah satu anggota team
+        secara bersamaan mengubah baris kode (di local dan di online repo)(atau membuat file dengan nama yang sama) lalu salah 
+        satu team melakukan pull , yang akan ini akan terjadi koflik merge, git akan menunggu keputusan user, apakah menerima
+        perubahan kode yang di buat anggota team (Accpet incoming changes) , atau mempertahankan kode yang dibuat (Accpet curent 
+        change) atau menerima keduanya (Accpet Both changes)).
+
+
+git merge (nama branch) adalah cara ubtuk menggabungkan branch dengan branch yang lain (selalu ikan berpindah ke branch yang 
+ingin di gabungkan)
+
+MAIN KEY > GIT GOLDEN RULES
+    Agar tidak pernah mengalami masalah timeline berantakan lagi di masa depan, selalu ingat dua aturan sederhana ini:
+        • Aturan 1 (Jika Proyek Sudah Ada di GitHub):
+    Jangan gunakan git init. Langsung gunakan git clone <URL> di folder baru Anda [Model Response]. 
+    Dengan cara ini, laptop Anda akan langsung menyalin sejarah asli (Commit 1 -> Commit 2) sehingga garis waktunya 
+    dijamin lurus sejak awal.
+        • Aturan 2 (Jika Menggunakan Folder Sendiri):
+    Jika terpaksa menggunakan git init, pastikan langkah pertama setelah memberikan alamat remote adalah mengetik 
+    git pull origin master SEBELUM Anda membuat file atau mengetik commit apa pun di laptop Anda.
